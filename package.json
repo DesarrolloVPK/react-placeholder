@@ -5,7 +5,7 @@
   "main": "lib",
   "scripts": {
     "test": "jest",
-    "build": "rm -rf lib && mkdir lib && sass src:lib && tsc",
+    "build": "mkdir lib && sass src:lib && tsc",
     "preversion": "npm run typecheck && npm run test",
     "prepublishOnly": "npm run build",
     "start": "styleguidist server",
@@ -29,7 +29,11 @@
     "url": "https://github.com/buildo/react-placeholder/issues"
   },
   "files": [
-    "lib"
+    "lib",
+    "src/reactPlaceholder.scss",
+    "LICENSE",
+    "README.md",
+    "CHANGELOG.md"
   ],
   "homepage": "https://github.com/buildo/react-placeholder",
   "typings": "lib",
@@ -60,7 +64,7 @@
     "react-dom": "^18.2.0",
     "react-styleguidist": "^13.1.1",
     "react-test-renderer": "^18.2.0",
-    "sass": "^1.66.1",
+    "sass": "^1.77.4",
     "sass-loader": "^13.3.2",
     "style-loader": "^3.3.3",
     "ts-jest": "^29.1.1",
